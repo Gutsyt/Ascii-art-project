@@ -41,3 +41,26 @@ No external image libraries (like OpenCV or Pillow) are used.
 
 ## ASCII Density Scale
 
+Dark areas use dense symbols, light areas use spaces or dots.
+
+---
+
+## How to Run
+
+1. Place your 24-bit BMP image in the project folder.
+2. Rename it to `bose.bmp` (or change FILE_PATH in code).
+  
+
+---
+
+## Applications
+- Terminal-based art
+- Low-bandwidth image visualization
+- Computer graphics learning
+- Digital art
+- Image processing basics
+
+---
+
+## Author
+Created as part of a Minor Project using Python.
