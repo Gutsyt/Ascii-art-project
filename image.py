@@ -2,7 +2,6 @@
 FILE_PATH = "bose.bmp"
 WIDTH_OUT = 100
 
-# Smooth dark → light ramp
 ASCII_CHARS = "$@%#*+=-:. "
 
 def map_char(val):
@@ -42,9 +41,8 @@ def main():
             f.read(padding)
             pixels.append(row)
 
-    pixels = pixels[::-1]  # Flip vertically
+    pixels = pixels[::-1]  
 
-    # ----------------- CONTRAST NORMALIZATION -----------------
     flat = [p for row in pixels for p in row]
     min_v, max_v = min(flat), max(flat)
 
@@ -55,7 +53,6 @@ def main():
             v = gamma_correct(v, 0.8)
             pixels[y][x] = v
 
-    # ----------------- RESIZE -----------------
     h_out = int(WIDTH_OUT * (h_in / w_in) * 0.55)
 
     for y in range(h_out):
@@ -77,3 +74,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
